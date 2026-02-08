@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefZone Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        darkBg: '#0F0913',
+                        darkSidebar: '#130B1A',
+                        darkCard: '#1C1421',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-gray-100 min-h-screen flex">
+
+    <aside class="w-64 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-darkSidebar flex flex-col fixed h-full">
+        <div class="p-6 flex items-center gap-2">
+            <div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white font-bold">R</div>
+            <span class="text-xl font-bold tracking-tight">RefZone <span class="text-primary text-sm uppercase">Store</span></span>
+        </div>
+
+        <nav class="flex-1 px-4 space-y-2 mt-4">
+            <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Categories</p>
+            <a href="#" class="nav-item active">All Equipment</a>
+            <a href="#" class="nav-item">Whistles & Audio</a>
+            <a href="#" class="nav-item">Cards & Folders</a>
+            <a href="#" class="nav-item">Apparel</a>
+            <a href="#" class="nav-item">Flags</a>
+        </nav>
+
+        <div class="p-4 border-t border-gray-200 dark:border-gray-800 space-y-2">
+            <button id="theme-toggle" class="w-full flex items-center justify-between p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <span class="text-sm font-medium">Appearance</span>
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="flex-1 ml-64 p-8">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold">Referee Gear</h1>
+            <p class="text-gray-500 dark:text-gray-400 mt-2">Professional equipment for the modern official.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div class="product-card bg-white dark:bg-darkCard p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                <div class="h-40 bg-gray-100 dark:bg-gray-800 rounded-xl mb-4 overflow-hidden flex items-center justify-center">
+                    <span class="text-gray-400">Product Image</span>
+                </div>
+                <div class="space-y-1">
+                    <span class="text-[10px] font-bold text-primary uppercase tracking-widest">Communication</span>
+                    <h3 class="text-lg font-bold leading-tight">Electronic Whistle</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Hygienic and loud—perfect for multi-game tournaments.</p>
+                </div>
+                <a href="YOUR_LINK" class="mt-6 block w-full py-2.5 bg-primary hover:bg-opacity-90 text-white text-center rounded-xl text-sm font-semibold transition-all">
+                    View on Retailer
+                </a>
+            </div>
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
